@@ -1,0 +1,110 @@
+* {/*aplica un reset básico a todos los elementos para eliminar márgenes y rellenos predeterminados, y establece el box-sizing para facilitar el manejo de tamaños */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {/* define variables de colores para mantener la consistencia en el diseño y facilitar cambios futuros */
+    --primary-color: #1a1a1a;
+    --secondary-color: #d4af37;
+    --light-bg: #f5f5f5;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+main {
+    flex: 1; 
+}
+
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-align: left;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+header nav {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav a i {
+    font-size: 1.1rem;
+}
+
+
+header nav a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a2a2a 100%);/* Agrega un fondo degradado para darle un aspecto más dinámico y atractivo a la sección hero */
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+}
